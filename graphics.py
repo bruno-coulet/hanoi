@@ -52,15 +52,17 @@ class Graphic():
     def rect_full_border(self, color, x, y, width, height, thickness, radius):
         button = pygame.draw.rect(self.Window, color, pygame.Rect(x - width //2, y - height //2, width, height),  thickness, radius)
         return button
-    
+    # def move(self):
+        
     def element(self):
         self.screen_color(self.white)
         self.text_not_align(self.font,50,"Tower Hanoi",self.black,250,50)
+        
         # Down
         self.rect_full_border(self.brown,100,400,160,10,0,5)
         self.rect_full_border(self.brown,400,400,160,10,0,5)
         self.rect_full_border(self.brown,700,400,160,10,0,5)
-        
+
         # Up
         self.rect_full_border(self.brown,100,325,10,150,0,5)
         self.rect_full_border(self.brown,400,325,10,150,0,5)
@@ -99,6 +101,7 @@ class Graphic():
             for event in pygame.event.get():
                     if event.type == pygame.QUIT:
                         pygame.quit()
+
             self.element()
             self.update()
 game_page = Graphic()
