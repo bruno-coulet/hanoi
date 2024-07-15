@@ -1,5 +1,43 @@
 ## Hanoi Tower
 
+
+
+Juillet 2024
+
+## Table des matières de la Veille
+
+- [Contexte du projet](#Contexte)
+- [Download requirements](#download-requirements)
+- [Algorithmes utilisés](#Algorithmes)
+- [Conclusion](#Conclusion)
+
+## Contexte
+Travail en équipe de 3 étudiants en 1ère année de `Bachelor IT spécialité Intelligence Artificielle` à [La Plateforme_](https://laplateforme.io/) à Marseille
+
+- Said Kheloufi
+  <a href="https://www.linkedin.com/in/said-kheloufi/">
+    <img src="img/linkedin.png" width=25>
+  </a>
+  <a href="https://github.com/said-kheloufi">
+    <img src="img/github.png" width=25>
+  </a>
+
+- Ines Lorquet
+  <a href="https://www.linkedin.com/in/ines-lorquet-35b90128b/">
+    <img src="img/linkedin.png" width=25>
+  </a>
+  <a href="https://github.com/ines-lorquet">
+    <img src="img/github.png" width=25>
+  </a>
+
+- Bruno Coulet
+  <a href="https://www.linkedin.com/in/bruno-coulet-35b90128b/">
+    <img src="img/linkedin.png" width=25>
+  </a>
+  <a href="https://github.com/bruno-coulet">
+    <img src="img/github.png" width=25>
+  </a>  
+
 ### Un jeu de réflexion
 
 Les Tours de Hanoi sont un jeu de réflexion.<br>
