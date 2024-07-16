@@ -1,6 +1,6 @@
 '''
-Recevoir en entrée une configuration en une chaîne de caractère,
-Par exemple :“8, 3”  pour 8 discs et 3 towers.
+Reçoit en entrée une configuration en chaîne de caractère,
+Par exemple :“8, 3”  pour 8 disques et 3 tours.
 '''
 # ------------VERSION 1------------------------------
 start_string="8,3"
@@ -26,8 +26,11 @@ print(f"list des towers: {towers}")
 
 
 '''tous les discs sont sur la tour de gauche'''
-towers[0]=len(discs)
-print(f"list des towers en début du jeu: {towers}")
+towers[0]=discs
+towers[1]=[]
+towers[2]=[]
+
+print(f"Position des discs en début du jeu: {towers}")
 
 
 
@@ -38,17 +41,18 @@ game = [towers[0],towers[1],towers[2]]
 
 '''déplacement'''
 def move(source, destination):
-    if towers[source]>0:
-        towers[source]-=1
-        towers[destination]+=1
+    if towers[source]:
+        moving=towers[source].pop(0)
+        towers[destination].append(moving)
 
-        print(f"Déplacer un disque de la tour {source} à la tour {destination}")
+        print(f"Déplace un disque de la tour {source} à la tour {destination}")
     else:
-        print(f"Erreur : la tour {source} est vide et ne peut pas déplacer de disque")
+        print(f"Erreur : la tour {source} est vide")
+
 
 # Déplacement d'un disque de la tour 1 à la tour 2
 move(0, 1)
-print("Après avoir déplacé le disque de la tour 1 à la tour 2 :")
+print("Après avoir déplacé le disque :")
 print(towers)
 
 
