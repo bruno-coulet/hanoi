@@ -1,10 +1,10 @@
 import pygame
-from solve_2 import solver
+from test_1 import test
 
-class Graphic(solver):
+class Graphic(test):
     def __init__(self):
         # Initialiser la classe de résolution (solver)
-        solver.__init__(self)
+        test.__init__(self)
 
         # Couleurs
         self.black = (0, 0, 0)
@@ -108,7 +108,9 @@ class Graphic(solver):
     # Méthode pour dessiner les disques sur les tours
     def draw_disks(self):
         colors = [self.pal1, self.pal2, self.pal3, self.pal4, self.pal5, self.pal6, self.pal7, self.pal8]
-            
+        # print("Tour 1",self.t_1)
+        # print("Tour 2",self.t_2)
+        # print("Tour 3",self.t_3)
         # Dessiner les disques sur la Tour 1
         for i, disk in enumerate(self.t_1):
             self.rect_full_border(colors[disk-1], 100, 387 - i * 15, 150 - (8 - disk) * 10, 15, 0, 5)
@@ -125,31 +127,35 @@ class Graphic(solver):
     def execute_move(self):
         if self.move_index < len(self.moves):
             from_tower, to_tower = self.moves[self.move_index]
-            if from_tower == "Tour_1":
+            # print(self.move_index,"and",len(self.moves))
+            # print(from_tower,"->",to_tower)
+            print(self.moves[self.move_index])
+            if from_tower == "1":
                 disk = self.t_1.pop()
-                self.solving = False
-            elif from_tower == "Tour_2":
+                print("ok1")
+
+            elif from_tower == "2":
                 disk = self.t_2.pop()
-                self.solving = False
+                print("ok1")
             else:
                 disk = self.t_3.pop()
-                self.solving = False
+                print("ok3")
 
-            if to_tower == "Tour_1":
+            if to_tower == "1":
                 self.t_1.append(disk)
-                self.solving = False
-            elif to_tower == "Tour_2":
+                print("ok1_1")
+            elif to_tower == "2":
                 self.t_2.append(disk)
-                self.solving = False
+                print("ok2_2")
             else:
                 self.t_3.append(disk)
-                self.solving = False
+                print("ok3_3")
                 
             self.move_index += 1
-
+            print(self.move_index)
     # Méthode principale pour exécuter le jeu
     def run(self):
-        self.solve("Tour_1", "Tour_3", "Tour_2", 8)
+        self.solve("1", "3", "2", 8)
         solving = False
         while True:
             for event in pygame.event.get():
@@ -160,7 +166,8 @@ class Graphic(solver):
                         self.solving = True
             if self.solving:
                 self.execute_move()
-                # pygame.time.wait(500)  # Attendre un peu avant le prochain mouvement (facultatif)
+                # print(self.moves)
+                pygame.time.wait(500)
             self.element()
             self.update()
 
