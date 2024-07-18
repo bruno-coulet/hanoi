@@ -123,29 +123,24 @@ class Graphic():
     def execute_move(self):
         if self.move_index < len(self.moves):
             from_tower, to_tower = self.moves[self.move_index]
-            print(self.moves[self.move_index])
+            print(from_tower, "->", to_tower)
             if from_tower == "1":
                 disk = self.t_1.pop()
-                print("ok1")
             elif from_tower == "2":
                 disk = self.t_2.pop()
-                print("ok2")
             else:
                 disk = self.t_3.pop()
-                print("ok3")
 
             if to_tower == "1":
                 self.t_1.append(disk)
-                print("ok1_1")
             elif to_tower == "2":
                 self.t_2.append(disk)
-                print("ok2_2")
             else:
                 self.t_3.append(disk)
-                print("ok3_3")
+
                 
             self.move_index += 1
-            print(self.move_index)
+
 
     # Méthode principale pour exécuter le jeu
     def run(self):
