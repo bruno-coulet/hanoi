@@ -7,6 +7,8 @@ Juillet 2024
 ## Table des matières de la Veille
 
 - [Contexte du projet](#Contexte)
+- [Problématique](#Problématique)
+- [Résolution](#Résolution)
 - [Algorithmes utilisés](#Algorithmes)
 - [Conclusion](#Conclusion)
 
@@ -74,3 +76,25 @@ a. Un script solve.py.<br>
 b. Un script main.py.<br>
 c. Un script graphics.py<br>
 d. Un fichier README.md présentant la problématique du projet, la solution proposée et une conclusion sur votre travail.<br>
+
+
+### Problématique
+
+La résolution de manièré itérative est possible mais laborieuse.
+Cela devient rapidement une usine à gaz si l'on augmente le nombre de disque.
+IL y a beaucoup de répétition.
+Il faut comprendre la logique du jeu, décomposer sa résolution en étapes reproductibles pour espérer produire un code plus concis et plus efficace.
+
+### Résolution
+
+LA solution est à chercher dans la recursivité.
+
+L’idée est de dire que pour déplacer n disques, on peut auparavant déplacer les n – 1 disques supérieurs.  
+De même pour déplacer n – 1 disques, on peut auparavant déplacer n – 2 disques.
+Ainsi de suite jusqu’à ne plus avoir de disque.
+Donc, si on sait déplacer n – 1 disques d’un piquet à un autre, il suffit de déplacer “correctement” le n
+eme disque.
+
+
+
+### Conclusion
