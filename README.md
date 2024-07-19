@@ -9,7 +9,6 @@ Juillet 2024
 - [Contexte du projet](#Contexte)
 - [Problématique](#Problématique)
 - [Résolution](#Résolution)
-- [Algorithmes utilisés](#Algorithmes)
 - [Conclusion](#Conclusion)
 
 ## Contexte
@@ -98,3 +97,5 @@ eme disque.
 
 
 ### Conclusion
+
+Ce sujet nous a permis de démontrer la puissance de la récursivité. 
