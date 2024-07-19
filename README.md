@@ -9,6 +9,7 @@ Juillet 2024
 - [Contexte du projet](#Contexte)
 - [Problématique](#Problématique)
 - [Résolution](#Résolution)
+- [Algorithmes utilisés](#Algorithmes)
 - [Conclusion](#Conclusion)
 
 ## Contexte
@@ -102,4 +103,7 @@ Nous avons également exploré la création d'une interface graphique avec graph
 
 ### Conclusion
 
-Ce sujet nous a permis de démontrer la puissance de la récursivité. 
+Les tours de Hanoï est un parfait exemple de la puissance de la récursivité.
+En effet, une approche itérative du sujet nous aurait conduit à produire un code beaucoup plus lourd.
+
+Il paraît indispensable de maîtriser le principe de recursivité pour afin de l'appliquer à nos futurs développement. 
