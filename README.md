@@ -53,7 +53,7 @@ L'objectif est de faire un minimum de déplacements.
 
 ### Outil de résolution
 
-Le programme reçoit en entrée une configuration de partie à résoudre, sous la forme d’une chaîne de caractère. Par exemple :<br>
+Le programme reçoit en entrée une configuration de partie à résoudre incluse dans le module main.py, sous la forme d’une chaîne de caractère. Par exemple :<br>
 “8, 3” pour une partie a 8 disques et 3 bâtonnets.  
 “172, 5” pour une partie a 172 disques et 5 bâtonnets.  
 <br>
@@ -87,7 +87,7 @@ Il faut comprendre la logique du jeu, décomposer sa résolution en étapes repr
 
 ### Résolution
 
-LA solution est à chercher dans la recursivité.
+La solution est à chercher dans la recursivité.
 
 L’idée est de dire que pour déplacer n disques, on peut auparavant déplacer les n – 1 disques supérieurs.  
 De même pour déplacer n – 1 disques, on peut auparavant déplacer n – 2 disques.
@@ -96,5 +96,14 @@ Donc, si on sait déplacer n – 1 disques d’un piquet à un autre, il suffit 
 eme disque.
 
 
+Nous avons réussi à implémenter un algorithme récursif qui résout le puzzle en un minimum de mouvements, répondant ainsi aux exigences du problème. Le script solve.py gère la logique de résolution, tandis que main.py facilite l'interaction avec l'utilisateur.
+Nous avons également exploré la création d'une interface graphique avec graphics.py pour améliorer l'expérience utilisateur. Ce projet nous a permis d'approfondir nos compétences en algorithmique et en programmation, et nous sommes satisfaits des résultats obtenus.
+
+
 
 ### Conclusion
+
+Les tours de Hanoï est un parfait exemple de la puissance de la récursivité.
+En effet, une approche itérative du sujet nous aurait conduit à produire un code beaucoup plus lourd.
+
+Il paraît indispensable de maîtriser le principe de recursivité pour afin de l'appliquer à nos futurs développement. 
