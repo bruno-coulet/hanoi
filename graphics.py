@@ -29,14 +29,6 @@ class Graphic():
         pygame.display.set_caption("Hanoi")
         self.clock = pygame.time.Clock()
         
-        # État des tours
-        self.t_1 = list(range(8, 0, -1))  # Les disques de 8 à 1 sur la Tour_1
-        self.t_2 = []
-        self.t_3 = []
-
-        # Index de mouvement actuel
-        self.move_index = 0
-        self.moves = []
 
     # Méthode de mise à jour de l'écran
     def update(self):

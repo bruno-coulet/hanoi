@@ -7,7 +7,10 @@ class MainRun(Solver, Graphic):
         Graphic.__init__(self)
         self.moves = []
         self.move_index = 0
-
+        self.t_1 = list(range(8, 0, -1))
+        self.t_2 = []
+        self.t_3 = []
+        
     def running(self):
         self.solve("1", "3", "2", 8, self.moves)
         self.run()
