@@ -16,6 +16,12 @@ class MainRun(Solver, Graphic):
         self.solve("1", "3", "2", 8, self.moves)
         self.run()
 
+# Pour récupérer les paramètres depuis l'appel du fichier: python main.py (argument1, argument2)
+# Le premier argument (index 0) estant le nom du fichier.
+
+# import sys
+# argument1 = sys.argv[1]
+# argument2 = sys.argv[2]
 
 game_page = MainRun()
 game_page.running()
